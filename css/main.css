@@ -1052,6 +1052,7 @@
             padding: 85px 0;
             position: relative;
             overflow: hidden;
+            z-index: 1;
         }
         
         .join-us-box {
@@ -1117,6 +1118,7 @@
             right: 74%;
             transform: translate(50%, -50%);
             width: 100%;
+            z-index: -1;
         }
         /***************************** Footer Section Start ***************************/
         
