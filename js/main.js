@@ -40,9 +40,9 @@ $(document).ready(function() {
             scrollTop: $("#features").offset().top
         }, 500);
     });
-    $(".tomanage").click(function() {
+    $(".toadvantages").click(function() {
         $('html, body').animate({
-            scrollTop: $("#manage").offset().top
+            scrollTop: $("#advantages").offset().top
         }, 500);
     });
     $(".totakamol").click(function() {
@@ -68,7 +68,10 @@ $(document).ready(function() {
     });
 
 
-
+    $(".mo-tabs a").on("shown.bs.tab", function(e) {
+        let $owl = $(".apps .owl-carousel");
+        $owl.trigger('refresh.owl.carousel');
+    });
     $('.apps .owl-carousel').owlCarousel({
         loop: true,
         autoplay: true,
@@ -102,10 +105,7 @@ $(document).ready(function() {
             }
         }
     });
-    $(".mo-tabs a").on("shown.bs.tab", function(e) {
-        let $owl = $(".apps .owl-carousel");
-        $owl.trigger('refresh.owl.carousel');
-    });
+
 
 
     $('.clients .owl-carousel').owlCarousel({
