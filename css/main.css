@@ -76,6 +76,11 @@ html[dir=ltr] .rotate::after {
     border-bottom-left-radius: 250px;
 }
 
+html[dir=ltr] .header-intro-content {
+    right: auto;
+    left: 0;
+}
+
 .header {
     position: relative;
     z-index: 2;
@@ -133,6 +138,7 @@ html[dir=ltr] .header-intro-content {
     font-size: 17px;
     font-weight: 400;
     position: relative;
+    padding: 0;
 }
 
 .nav-li .nav-link::after {
@@ -291,14 +297,14 @@ html[dir=ltr] .intro-content .order-now::after {
 .device {
     position: absolute;
     top: 15%;
-    left: 135px;
+    left: 120px;
     z-index: 3;
     /* width: 65%; */
 }
 
 html[dir=ltr] .device {
     left: auto;
-    right: 65%;
+    right: -80px;
 }
 
 .pattern {
@@ -1662,6 +1668,7 @@ html[dir=ltr] .takamol-elements .element:nth-of-type(6) {
     .device {
         position: absolute;
         top: 25%;
+        left: 135px;
     }
     .features::before {
         width: 90%;
