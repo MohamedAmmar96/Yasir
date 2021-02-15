@@ -195,6 +195,32 @@ html[dir=ltr] .header-intro-content {
     margin-inline-start: 10px;
 }
 
+.menu {
+    color: var(--sub);
+    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    display: none;
+}
+
+.open-menu::after {
+    content: "\f0c9";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    font-style: normal;
+}
+
+.close-menu::after {
+    content: "\f00d";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    font-style: normal;
+}
+
 .intro {
     position: relative;
     overflow: hidden;
@@ -304,7 +330,7 @@ html[dir=ltr] .intro-content .order-now::after {
 
 html[dir=ltr] .device {
     left: auto;
-    right: -80px;
+    right: 40px;
 }
 
 .pattern {
@@ -351,8 +377,8 @@ html[dir=ltr] .device {
 }
 
 .about-img-box {
-    width: 75px;
-    height: 85px;
+    /* width: 75px;
+    height: 85px; */
     /* clip-path: polygon(50% 5%, 95% 30%, 95% 70%, 50% 95%, 5% 70%, 5% 30%); */
     display: flex;
     flex-direction: row;
@@ -377,6 +403,15 @@ html[dir=ltr] .device {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+.about-img {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    height: 45px;
 }
 
 .about-item-content {
@@ -419,7 +454,7 @@ html[dir=ltr] .about-item-title {
     position: absolute;
     top: 0;
     left: 0;
-    width: 1650px;
+    /* width: 1650px; */
     height: 100%;
     border-top-right-radius: 280px;
     border-bottom-right-radius: 280px;
@@ -459,7 +494,7 @@ html[dir=ltr] .features::before {
 }
 
 .feature-item {
-    margin-bottom: 35px;
+    margin-bottom: 20px;
     width: 450px;
 }
 
@@ -467,7 +502,7 @@ html[dir=ltr] .features::before {
     padding-right: 40px;
     display: block;
     position: relative;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     cursor: pointer;
     font-size: 20px;
     font-weight: 500;
@@ -498,7 +533,7 @@ html[dir=ltr] .feature-item .choose .check {
 
 .checkmark {
     position: absolute;
-    top: 2px;
+    top: 4px;
     right: 0;
     height: 22px;
     width: 22px;
@@ -648,14 +683,15 @@ html[dir=ltr] .feature-img-box {
 }
 
 .contact-li {
-    width: 100px;
-    height: 115px;
+    /* width: 100px;
+    height: 115px; */
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     /* clip-path: polygon(50% 5%, 95% 30%, 95% 70%, 50% 95%, 5% 70%, 5% 30%); */
     margin-inline-end: 30px;
+    position: relative;
 }
 
 .contact-li:last-child {
@@ -673,17 +709,20 @@ html[dir=ltr] .feature-img-box {
 
 .contact-tool-img {
     width: 52px;
-    height: 48px;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    /* height: 48px; */
 }
 
 
 /***************************** System manage Section Start ********************/
 
 .system-manage {
-    padding: 130px 0;
+    padding: 90px 0;
     background: url(../images/managment/fleet-management-bg.png) no-repeat center;
     background-size: cover;
-    background-attachment: fixed;
 }
 
 .system-title {
@@ -746,6 +785,11 @@ html[dir=ltr] .system-desc {
 .takamol-content .logo .logo-img {
     width: 100%;
     height: 100%;
+}
+
+.logo-small-screen,
+.takamol-small-screen {
+    display: none;
 }
 
 .takamol-title {
@@ -1634,8 +1678,20 @@ html[dir=ltr] .takamol-elements .element:nth-of-type(6) {
 
 @media (min-width: 992px)and (max-width: 1199px) {}
 
-@media (min-width: 1200px)and (max-width: 1500px) {
+@media (min-width: 1200px)and (max-width: 1400px) {
     .header-intro-content {
+        width: 1500px;
+    }
+    .features::before {
+        width: 1450px;
+    }
+}
+
+@media (min-width: 1401px)and (max-width: 1500px) {
+    .header-intro-content {
+        width: 1550px;
+    }
+    .features::before {
         width: 1500px;
     }
 }
@@ -1643,6 +1699,33 @@ html[dir=ltr] .takamol-elements .element:nth-of-type(6) {
 @media (min-width:1501px)and (max-width:1600px) {
     .header-intro-content {
         width: 1600px;
+    }
+    .features::before {
+        width: 1550px;
+    }
+}
+
+@media (min-width:1601px)and (max-width:1700px) {
+    .header-intro-content {
+        width: 1650px;
+    }
+    .device {
+        left: 100px;
+    }
+    .features::before {
+        width: 1600px;
+    }
+}
+
+@media (min-width:1701px)and (max-width:1749px) {
+    .header-intro-content {
+        width: 1700px;
+    }
+}
+
+@media (min-width:1701px) {
+    .features::before {
+        width: 1650px;
     }
 }
 
@@ -1652,22 +1735,13 @@ html[dir=ltr] .takamol-elements .element:nth-of-type(6) {
     }
 }
 
-@media (min-width:1601px)and (max-width:1700px) {
-    .header-intro-content {
-        width: 1650px;
-    }
-    /* .device {
-        left: 100px;
-    } */
-}
-
-@media (min-width:1650px) {
+@media (min-width:1751px) {
     .header-intro-content {
         width: 1800px;
     }
     .device {
         position: absolute;
-        top: 25%;
+        top: 27%;
         left: 135px;
     }
     .features::before {
