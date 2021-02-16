@@ -84,8 +84,16 @@ $(document).ready(function() {
                 center: false,
                 stagePadding: 15,
             },
-            600: {
+            500: {
+                items: 2,
+                margin: 20,
+                center: false,
+                stagePadding: 15,
+            },
+            700: {
                 items: 3,
+                margin: 10,
+                center: true,
             },
             992: {
                 items: 5,
@@ -151,7 +159,7 @@ $(document).ready(function() {
                     items: 1
                 },
                 600: {
-                    items: 2
+                    items: 1
 
                 }
             }
