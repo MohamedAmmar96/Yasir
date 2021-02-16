@@ -170,42 +170,33 @@ $(document).ready(function() {
     };
 
 
-    // This is To Open search Box
-    $(".search").click(function() {
-        $("body").addClass("overflow");
-        $(".overlay-box").slideDown(300);
-    });
-    $(".search").click(function() {
-        $(".search .search-icon").removeClass("open-search")
-        $(".search .search-icon").addClass("close-search")
-        $(".close-search-btn").fadeIn(500)
-        $(".search-box").fadeIn(500);
-    });
-    $(".close-search-btn,.overlay-box").click(function() {
-        $("body").removeClass("overflow");
-        $(".overlay-box").slideUp(500);
-    });
-    $(".close-search-btn,.overlay-box").click(function() {
-        $(".search .search-icon").addClass("open-search")
-        $(".search .search-icon").removeClass("close-search")
-        $(".close-search-btn").fadeOut(300)
-        $(".search-box").fadeOut(300);
-    });
-
-
     //This is to Open Side Menu in Small Screens
+    // $(".menu").click(function() {
+    //     $(".menu .menu-icon").removeClass("open-menu")
+    //     $(".menu .menu-icon").addClass("close-menu")
+    //     $(".mo-nav").addClass("menu-open");
+    //     $("body").addClass("overflow")
+    // });
+    // $(".close,.nav-li .nav-link").click(function() {
+    //     $(".menu .menu-icon").addClass("open-menu")
+    //     $(".menu .menu-icon").removeClass("close-menu")
+    //     $(".mo-nav").removeClass("menu-open");
+    //     $("body").removeClass("overflow")
+    // });
+
     $(".menu").click(function() {
         $(".menu .menu-icon").removeClass("open-menu")
         $(".menu .menu-icon").addClass("close-menu")
-        $(".mo-nav").addClass("menu-open");
+            // $(".mo-nav").slideDown(500);
+        $(".mo-nav").addClass("menu-down");
         $("body").addClass("overflow")
     });
     $(".close,.nav-li .nav-link").click(function() {
         $(".menu .menu-icon").addClass("open-menu")
         $(".menu .menu-icon").removeClass("close-menu")
-        $(".mo-nav").removeClass("menu-open");
+            // $(".mo-nav").slideUp(500);
+        $(".mo-nav").removeClass("menu-down");
         $("body").removeClass("overflow")
     });
-
 
 });
