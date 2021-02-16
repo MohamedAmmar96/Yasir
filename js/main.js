@@ -11,7 +11,7 @@ $(window).on('load', function() {
 // Scroll To Top Button 
 var scrollButton = $(".scroll-top");
 $(window).scroll(function() {
-    ($(this).scrollTop() >= 500) ? scrollButton.show(600): scrollButton.hide(600);
+    ($(this).scrollTop() >= 900) ? scrollButton.show(600): scrollButton.hide(600);
 });
 // Click Button to scroll top 
 scrollButton.click(function() {

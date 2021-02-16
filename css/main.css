@@ -248,12 +248,12 @@ html[dir=ltr] .header-intro-content {
 }
 
 .intro-title-one {
-    animation: typing 1.5s steps(40) 1.1s normal both;
+    animation: typing 1.3s steps(40) 1.1s normal both;
 }
 
 .intro-title-two {
     margin-bottom: 30px;
-    animation: typing 1.5s steps(40) 2.3s normal both;
+    animation: typing 1.3s steps(40) 2.3s normal both;
 }
 
 @keyframes typing {
@@ -351,7 +351,7 @@ html[dir=ltr] .device {
     font-size: 24px;
     font-weight: 400;
     color: var(--text);
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     text-align: center;
 }
 
@@ -977,7 +977,7 @@ html[dir=ltr] .takamol-elements .element:nth-of-type(6) {
     right: 0;
     width: 100%;
     height: 100%;
-    background: var(--main);
+    background: linear-gradient(to right, #ff6e1f, #fe7223, #fe792a, #fc8536, #fe792a);
     transform: scaleX(0);
     transform-origin: right;
     transition: all 0.4s ease-in-out;
@@ -1827,7 +1827,7 @@ html[dir=ltr] .scroll-top::after {
     }
     .about-p1 {
         font-size: 18px;
-        margin-bottom: 30px;
+        margin-bottom: 10px;
         padding: 0 5px;
     }
     .about-p2 {
@@ -2319,12 +2319,12 @@ html[dir=ltr] .scroll-top::after {
 @media (max-width: 500px) {
     .intro {
         z-index: 1;
-        padding-top: 10px;
+        padding-top: 50px;
         justify-content: flex-start;
         text-align-last: center;
     }
     .device {
-        max-width: 100%;
+        max-width: 130%;
         top: auto;
         bottom: -90px;
         right: 50%;
@@ -2601,7 +2601,7 @@ html[dir=ltr] .scroll-top::after {
         width: 1550px;
     }
     .device {
-        bottom: -340px;
+        bottom: -240px;
     }
 }
 
@@ -2610,8 +2610,8 @@ html[dir=ltr] .scroll-top::after {
         width: 1750px;
     }
     .device {
-        bottom: -340px;
-        left: 100px;
+        bottom: -250px;
+        left: 130px;
     }
     .features::before {
         width: 1600px;
