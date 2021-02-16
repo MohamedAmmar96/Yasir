@@ -43,22 +43,17 @@ $(document).ready(function() {
     $(".toadvantages").click(function() {
         $('html, body').animate({
             scrollTop: $("#advantages").offset().top
-        }, 500);
+        }, 600);
     });
     $(".totakamol").click(function() {
         $('html, body').animate({
             scrollTop: $("#takamol").offset().top
-        }, 500);
+        }, 700);
     });
     $(".tocs").click(function() {
         $('html, body').animate({
             scrollTop: $("#cs").offset().top
-        }, 500);
-    });
-    $(".tocontact-us").click(function() {
-        $('html, body').animate({
-            scrollTop: $("#contact-us").offset().top
-        }, 500);
+        }, 700);
     });
 
 
@@ -68,13 +63,10 @@ $(document).ready(function() {
     });
 
 
-    $(".mo-tabs a").on("shown.bs.tab", function(e) {
-        let $owl = $(".apps .owl-carousel");
-        $owl.trigger('refresh.owl.carousel');
-    });
+
     $('.apps .owl-carousel').owlCarousel({
         loop: true,
-        autoplay: true,
+        // autoplay: true,
         autoplayTimeout: 4000,
         margin: 10,
         // stagePadding: 5,
@@ -87,12 +79,13 @@ $(document).ready(function() {
         center: true,
         responsive: {
             0: {
-                items: 2,
-                margin: 20
+                items: 1,
+                margin: 30,
+                center: false,
+                stagePadding: 15,
             },
-            500: {
-                items: 4,
-                margin: 20
+            600: {
+                items: 3,
             },
             992: {
                 items: 5,
@@ -105,7 +98,10 @@ $(document).ready(function() {
             }
         }
     });
-
+    $(".mo-tabs a").on("shown.bs.tab", function(e) {
+        let $owl = $(".apps .owl-carousel");
+        $owl.trigger('refresh.owl.carousel');
+    });
 
 
     $('.clients .owl-carousel').owlCarousel({
@@ -139,31 +135,31 @@ $(document).ready(function() {
         }
     });
 
-    // //This is To make faetures as slider in small screens
-    // if ($(window).width() <= 991) {
-    //     $(".features .features-box").addClass("owl-carousel owl-theme");
-    //     $(".features-box .feature").removeClass("owl-carousel");
-    //     $('.features .owl-carousel').owlCarousel({
-    //         loop: false,
-    //         margin: 0,
-    //         rtl: true,
-    //         responsiveClass: true,
-    //         nav: false,
-    //         dots: true,
-    //         responsive: {
-    //             0: {
-    //                 items: 1
-    //             },
-    //             600: {
-    //                 items: 2
+    //This is To make faetures as slider in small screens
+    if ($(window).width() <= 991) {
+        $(".features-items-box").addClass("owl-carousel owl-theme");
+        $(".features-items-box .feature-item").removeClass("owl-carousel");
+        $('.features-items-box').owlCarousel({
+            loop: false,
+            margin: 0,
+            rtl: true,
+            responsiveClass: true,
+            nav: false,
+            dots: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
 
-    //             }
-    //         }
-    //     })
-    // } else {
-    //     $(".features-box .feature").removeClass("owl-carousel");
-    //     $(".features-box .feature").removeClass("owl-carousel");
-    // };
+                }
+            }
+        })
+    } else {
+        $(".features-box .feature").removeClass("owl-carousel");
+        $(".features-box .feature").removeClass("owl-carousel");
+    };
 
 
     // This is To Open search Box
@@ -191,42 +187,17 @@ $(document).ready(function() {
 
     //This is to Open Side Menu in Small Screens
     $(".menu").click(function() {
-        $("body").addClass("overflow")
         $(".menu .menu-icon").removeClass("open-menu")
         $(".menu .menu-icon").addClass("close-menu")
         $(".mo-nav").addClass("menu-open");
-        $(".overlay-box2").fadeIn(500);
+        $("body").addClass("overflow")
     });
-    $(".close,.overlay-box2").click(function() {
-        $("body").removeClass("overflow")
+    $(".close,.nav-li .nav-link").click(function() {
         $(".menu .menu-icon").addClass("open-menu")
         $(".menu .menu-icon").removeClass("close-menu")
         $(".mo-nav").removeClass("menu-open");
-        $(".overlay-box2").fadeOut(500);
+        $("body").removeClass("overflow")
     });
 
-    // if ($(window).width() <= 991) {
-    //     $(".lang-name").click(function() {
-    //         $(this).toggleClass("rotate")
-    //         $(".mo-nav .lang-list").slideToggle(300);
-    //     });
-    // }
-    $(".config-box .nav-link").click(function() {
-        $(this).toggleClass("rotate")
-        $(this).siblings(".config-list").slideToggle(300);
-    });
-
-    if ($(window).width() <= 991) {
-        $(".sub-box .nav-link").click(function() {
-            $(this).toggleClass("rotate")
-            $(this).siblings(".sub-menu").slideToggle(300);
-        });
-    }
-    if ($(window).width() <= 991) {
-        $(".sub-sub-box .sub-link").click(function() {
-            $(this).toggleClass("rotate")
-            $(this).siblings(".sub-sub-menu").slideToggle(300);
-        });
-    }
 
 });

@@ -35,7 +35,7 @@
     <div class="header-intro">
         <div class="header-intro-content">
             <img class="device wow animate__zoomIn" data-wow-duration="0.7s" src="images/header/devices.png">
-            <img class="pattern" src="images/header/pattern1.svg">
+            <!-- <img class="pattern" src="images/header/pattern1.svg"> -->
         </div>
         <div class="header">
             <div class="container">
@@ -46,7 +46,7 @@
                         </div>
                     </div>
                     <div class="mo-nav">
-                        <button class="close"><i class="fa fa-times"></i></button>
+                        <button class="close"><i class="lnr lnr-cross"></i></button>
                         <div class="lang">
                             <a class="lang-name" href="index-en.html">English</a>
                             <div class="flag">
@@ -215,6 +215,7 @@
                             <span class="checkmark"></span>
                             أجهزة نقاط البيع للسائقين
                         </label>
+                        <p class="select-small-screen">أجهزة نقاط البيع للسائقين</p>
                         <p class="selection-desc wow animate__fadeInUp" data-wow-duration="0.7s">لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى)</p>
                         <div class="feature-img-box">
                             <img class="feature-img" src="images/features/feat-radio1.png">
@@ -226,6 +227,7 @@
                             <span class="checkmark"></span>
                             المتجر الإلكتروني وتطبيق العملاء
                         </label>
+                        <p class="select-small-screen">المتجر الإلكتروني وتطبيق العملاء</p>
                         <p class="selection-desc wow animate__fadeInUp" data-wow-duration="0.7s">لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى)</p>
                         <div class="feature-img-box">
                             <img class="feature-img" src="images/features/feat-radio1.png">
@@ -237,6 +239,7 @@
                             <span class="checkmark"></span>
                             نظام إدارة علاقات العملاء
                         </label>
+                        <p class="select-small-screen">نظام إدارة علاقات العملاء</p>
                         <p class="selection-desc wow animate__fadeInUp" data-wow-duration="0.7s">لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى)</p>
                         <div class="feature-img-box">
                             <img class="feature-img" src="images/features/feat-radio1.png">
@@ -308,10 +311,10 @@
     <div id="takamol" class="takamol">
         <div class="container">
             <div class="takamol-big-box">
-                <div class="logo logo-small-screen">
+                <div class="logo-small-screen">
                     <img class="logo-img" src="images/logo/logo-color.svg">
                 </div>
-                <h3 class="takamol-title takamol-small-screen">التكامل مع الأنظمة الخارجية</h3>
+                <h3 class="takamol-small-screen">التكامل مع الأنظمة الخارجية</h3>
                 <div class="takamol-content wow animate__zoomIn" data-wow-duration="0.7s">
                     <div class="logo">
                         <img class="logo-img" src="images/logo/logo-color.svg">
@@ -349,19 +352,19 @@
     <!----------------------------------------- Apps Start -------------------------------------->
     <div class="apps">
         <h2 class="apps-title wow animate__fadeInDown" data-wow-duration="0.7s">لمحة من تطبيقات نظام يسير متعدد الوحدات</h2>
-        <ul class="mo-tabs list-unstyled wow animate__fadeInDown" data-wow-duration="0.7s" role="tablist">
-            <li role="presentation" class="mo-tabs-li active">
-                <a class="mo-tabs-link" href="#apps1" aria-controls="home" role="tab" data-toggle="tab">تطبيق نقاط البيع</a>
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#apps1" role="tab" aria-controls="pills-home" aria-selected="true">تطبيق نقاط البيع</a>
             </li>
-            <li role="presentation" class="mo-tabs-li">
-                <a class="mo-tabs-link" href="#apps2" aria-controls="home" role="tab" data-toggle="tab">تطبيق السائقين</a>
+            <li class="nav-item">
+                <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#apps2" role="tab" aria-controls="pills-profile" aria-selected="false">تطبيق السائقين</a>
             </li>
-            <li role="presentation" class="mo-tabs-li">
-                <a class="mo-tabs-link" href="#apps1" aria-controls="home" role="tab" data-toggle="tab">تطبيق العملاء</a>
+            <li class="nav-item">
+                <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#apps1" role="tab" aria-controls="pills-contact" aria-selected="false">تطبيق العملاء</a>
             </li>
         </ul>
-        <div class="tab-content">
-            <div id="apps1" role="tabpanel" class="tab-pane active">
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="apps1" role="tabpanel" aria-labelledby="pills-home-tab">
                 <div class="owl-carousel owl-theme">
                     <div class="app">
                         <div class="app-img-box">
@@ -400,7 +403,7 @@
                     </div>
                 </div>
             </div>
-            <div id="apps2" role="tabpanel" class="tab-pane">
+            <div class="tab-pane fade" id="apps2" role="tabpanel" aria-labelledby="pills-profile-tab">
                 <div class="owl-carousel owl-theme">
                     <div class="app">
                         <div class="app-img-box">
@@ -493,7 +496,7 @@
     <!------------------------------------ Customer Service Start ------------------------------->
     <div id="cs" class="customer-service">
         <div class="container">
-            <h2 class="cs-title cs-title-mdall-screen wow animate__fadeInDown" data-wow-duration="0.7s">خدمة عملاء مميزة</h2>
+            <h2 class="cs-title cs-title-small-screen wow animate__fadeInDown" data-wow-duration="0.7s">خدمة عملاء مميزة</h2>
             <div class="cs-big-box">
                 <div class="cs-img-box wow animate__zoomIn" data-wow-duration="0.7s">
                     <img class="cs-img" src="images/customer-service/cs.png">

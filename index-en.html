@@ -35,7 +35,6 @@
     <div class="header-intro">
         <div class="header-intro-content">
             <img class="device wow animate__zoomIn" data-wow-duration="0.7s" src="images/header/devices.png">
-            <img class="pattern" src="images/header/pattern1.svg">
         </div>
         <div class="header">
             <div class="container">
@@ -46,7 +45,7 @@
                         </div>
                     </div>
                     <div class="mo-nav">
-                        <button class="close"><i class="fa fa-times"></i></button>
+                        <button class="close"><i class="lnr lnr-cross"></i></button>
                         <div class="lang">
                             <a class="lang-name" href="index.html">العربية</a>
                             <div class="flag">
@@ -215,6 +214,7 @@
                             <span class="checkmark"></span>
                             POS Devices for Drivers
                         </label>
+                        <p class="select-small-screen">POS Devices for Drivers</p>
                         <p class="selection-desc wow animate__fadeInUp" data-wow-duration="0.7s">Lorem Ipsum is simply a dummy text (meaning that the end is the form and not the content)</p>
                         <div class="feature-img-box">
                             <img class="feature-img" src="images/features/feat-radio1.png">
@@ -226,6 +226,7 @@
                             <span class="checkmark"></span>
                             Online Store and Customer Application
                         </label>
+                        <p class="select-small-screen">Online Store and Customer Application</p>
                         <p class="selection-desc wow animate__fadeInUp" data-wow-duration="0.7s">Lorem Ipsum is simply a dummy text (meaning that the end is the form and not the content)</p>
                         <div class="feature-img-box">
                             <img class="feature-img" src="images/features/feat-radio1.png">
@@ -237,6 +238,7 @@
                             <span class="checkmark"></span>
                             Customer Relationship Management System
                         </label>
+                        <p class="select-small-screen">Customer Relationship Management System</p>
                         <p class="selection-desc wow animate__fadeInUp" data-wow-duration="0.7s">Lorem Ipsum is simply a dummy text (meaning that the end is the form and not the content)</p>
                         <div class="feature-img-box">
                             <img class="feature-img" src="images/features/feat-radio1.png">
@@ -308,10 +310,10 @@
     <div id="takamol" class="takamol">
         <div class="container">
             <div class="takamol-big-box">
-                <div class="logo logo-small-screen">
+                <div class="logo-small-screen">
                     <img class="logo-img" src="images/logo/logo-color.svg">
                 </div>
-                <h3 class="takamol-title takamol-small-screen">Integration with External Systems</h3>
+                <h3 class="takamol-small-screen">Integration with External Systems</h3>
                 <div class="takamol-content wow animate__zoomIn" data-wow-duration="0.7s">
                     <div class="logo">
                         <img class="logo-img" src="images/logo/logo-color.svg">
@@ -348,20 +350,20 @@
 
     <!----------------------------------------- Apps Start -------------------------------------->
     <div class="apps">
-        <h2 class="apps-title wow animate__fadeInDown" data-wow-duration="0.7s">A Glimpse of the Applications of a Multi-Unit Managing System</h2>
-        <ul class="mo-tabs list-unstyled wow animate__fadeInDown" data-wow-duration="0.7s" role="tablist">
-            <li role="presentation" class="mo-tabs-li active">
-                <a class="mo-tabs-link" href="#apps1" aria-controls="home" role="tab" data-toggle="tab">POS Application</a>
+        <h2 class="apps-title wow animate__fadeInDown" data-wow-duration="0.7s">A glimpse of the Applications of a Multi-Unit Managing System</h2>
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#apps1" role="tab" aria-controls="pills-home" aria-selected="true">POS Application</a>
             </li>
-            <li role="presentation" class="mo-tabs-li">
-                <a class="mo-tabs-link" href="#apps2" aria-controls="home" role="tab" data-toggle="tab">Drivers Application</a>
+            <li class="nav-item">
+                <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#apps2" role="tab" aria-controls="pills-profile" aria-selected="false">Drivers Application</a>
             </li>
-            <li role="presentation" class="mo-tabs-li">
-                <a class="mo-tabs-link" href="#apps1" aria-controls="home" role="tab" data-toggle="tab">Customer Application</a>
+            <li class="nav-item">
+                <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#apps1" role="tab" aria-controls="pills-contact" aria-selected="false">Customer Application</a>
             </li>
         </ul>
-        <div class="tab-content">
-            <div id="apps1" role="tabpanel" class="tab-pane active">
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="apps1" role="tabpanel" aria-labelledby="pills-home-tab">
                 <div class="owl-carousel owl-theme">
                     <div class="app">
                         <div class="app-img-box">
@@ -400,7 +402,7 @@
                     </div>
                 </div>
             </div>
-            <div id="apps2" role="tabpanel" class="tab-pane">
+            <div class="tab-pane fade" id="apps2" role="tabpanel" aria-labelledby="pills-profile-tab">
                 <div class="owl-carousel owl-theme">
                     <div class="app">
                         <div class="app-img-box">
