@@ -57,6 +57,8 @@ html[dir=ltr] .rotate::after {
 .header-intro {
     overflow: hidden;
     position: relative;
+    display: flex;
+    flex-direction: column;
     height: 100vh;
 }
 
@@ -1063,10 +1065,6 @@ html[dir=ltr] .takamol-elements .element:nth-of-type(6) {
     transition: all 0.4s ease-in-out;
 }
 
-.apps .owl-item:hover {
-    transform: scale(1);
-}
-
 
 /***************************** Clients Section Start **************************/
 
@@ -1083,7 +1081,7 @@ html[dir=ltr] .takamol-elements .element:nth-of-type(6) {
     color: var(--text);
 }
 
-.client {
+.mo-client {
     width: 100%;
 }
 
@@ -2429,6 +2427,25 @@ html[dir=ltr] .scroll-top::after {
         width: 100%;
         border-radius: 0;
     }
+    .device {
+        position: absolute;
+        top: 40%;
+        left: 1%;
+        width: 55%;
+        z-index: 3;
+        /* width: 65%; */
+    }
+    .features::before {
+        width: 100%;
+        border-radius: 0;
+    }
+    html[dir=ltr] .features::before {
+        width: 100%;
+        border-radius: 0;
+    }
+    .feature-select {
+        height: 500px;
+    }
     .feature-item {
         margin-bottom: 20px;
         width: 350px;
@@ -2449,9 +2466,74 @@ html[dir=ltr] .scroll-top::after {
     .contact-first-h,
     .contact-last-h {
         width: 100%;
+        font-size: 24px;
+    }
+    .contact-desc {
+        width: 100%;
     }
     .cs-img {
         max-width: 100%;
+    }
+    .takamol-elements .element:nth-of-type(1) {
+        top: 0 !important;
+        left: auto !important;
+        right: 40px !important;
+        width: 105px;
+    }
+    html[dir=ltr] .takamol-elements .element:nth-of-type(1) {
+        left: 40px !important;
+        right: auto !important;
+    }
+    .takamol-elements .element:nth-of-type(2) {
+        top: 10px !important;
+        left: 15px !important;
+        width: 125px;
+    }
+    html[dir=ltr] .takamol-elements .element:nth-of-type(2) {
+        left: auto !important;
+        right: 15px !important;
+    }
+    .takamol-elements .element:nth-of-type(3) {
+        top: 125px !important;
+        right: 100px !important;
+        width: 125px;
+    }
+    html[dir=ltr] .takamol-elements .element:nth-of-type(3) {
+        right: auto !important;
+        left: 125px !important;
+    }
+    .takamol-elements .element:nth-of-type(4) {
+        top: auto !important;
+        bottom: 40px !important;
+        left: 0px !important;
+        width: 75px;
+    }
+    html[dir=ltr] .takamol-elements .element:nth-of-type(4) {
+        left: auto !important;
+        right: 40px !important;
+    }
+    .takamol-elements .element:nth-of-type(5) {
+        top: auto !important;
+        bottom: -50px !important;
+        left: 85px !important;
+        width: 55px;
+    }
+    html[dir=ltr] .takamol-elements .element:nth-of-type(5) {
+        left: auto !important;
+        right: 85px !important;
+    }
+    .takamol-elements .element:nth-of-type(6) {
+        top: auto !important;
+        bottom: -30px !important;
+        right: 20px !important;
+        width: 55px;
+    }
+    html[dir=ltr] .takamol-elements .element:nth-of-type(6) {
+        right: auto !important;
+        left: 20px !important;
+    }
+    .element-img {
+        width: 100%;
     }
 }
 
