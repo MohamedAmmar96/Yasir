@@ -2188,6 +2188,9 @@ html[dir=ltr] .scroll-top::after {
         width: 170px;
         white-space: nowrap;
     }
+    .nav-item .nav-link.active {
+        order: 2;
+    }
     .apps .owl-carousel .owl-nav .owl-prev {
         position: absolute;
         bottom: -20px;
